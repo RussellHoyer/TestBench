@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Package>
+  <InstallConfiguration preserve="false">
+    <RarSfxConfiguration>
+      ;The comment below contains SFX script commands
+      Path=CompanyName1\TestBench Debug
+      SavePath
+      Shortcut=D, TestBench.exe, , "Is a test platform for c sharp", "Test Bench", graph.ico
+      Overwrite=1
+      Title=TestBench Installer
+      Text
+      {
+      This will install the TestBench application to the default location.
+      }
+    </RarSfxConfiguration>
+    <ApplicationName>TestBench Debug</ApplicationName>
+    <SetupExeName>TestBench Debug Setup</SetupExeName>
+    <ReleaseBuildFolder>C:\Users\(Redacted)\source\repos\TestBench\bin\Release</ReleaseBuildFolder>
+    <OutputFolder>C:\Temp\Deploy</OutputFolder>
+  </InstallConfiguration>
+
+  <RequiredFiles>
+    <RequiredFile>TestBench.exe</RequiredFile>
+    <RequiredFile>TestBench.exe.config</RequiredFile>
+    <RequiredFile usePath="C:\Users\(Redacted)\source\repos\TestBench">DataResources</RequiredFile>
+  </RequiredFiles>
+</Package>

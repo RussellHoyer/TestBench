@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RootThing>
+  <SubThings>
+    <SubSubThing>This is a sub thing</SubSubThing>
+    <SubSubThing>This is also a sub thing</SubSubThing>
+  </SubThings>
+</RootThing>
