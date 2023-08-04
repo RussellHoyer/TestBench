@@ -30,7 +30,7 @@ namespace TestBench.Tests
         }
         internal string FormatPhone(string inPhone)
         {
-            return $"({inPhone.Substring(0,3)}) {inPhone.Substring(3,3)}-{inPhone.Substring(6,4)}";
+            return $"({inPhone.Substring(0, 3)}) {inPhone.Substring(3, 3)}-{inPhone.Substring(6, 4)}";
         }
 
         public void AnonObjectTest()
@@ -61,6 +61,32 @@ namespace TestBench.Tests
             Console.WriteLine($"s1.Length - {s1.Length}");
             Console.WriteLine($"s2 was initialized with two elements");
             Console.WriteLine($"s2.Count - {s2.Count}");
+        }
+
+        public void SearchListAny()
+        {
+            List<TestStringClass> testStrings = new List<TestStringClass>() 
+            { 
+                new TestStringClass("test", true),
+                new TestStringClass("test", true),
+                new TestStringClass("test", false)
+            };
+            var result = testStrings.Any(a => a.BoolProperty == false);
+            Console.WriteLine($"Result when searching == false (with a false item in the collection): {result}");
+            testStrings.RemoveAt(2);
+            result = testStrings.Any(a => a.BoolProperty == false);
+            Console.WriteLine($"Result when searching == false (with zero false items in the collection): {result}");
+        }
+
+        public class TestStringClass
+        {
+            public string MyProperty { get; set; }
+            public bool BoolProperty { get; set; }
+            public TestStringClass(string myProperty, bool boolProperty)
+            {
+                MyProperty = myProperty;
+                BoolProperty = boolProperty;
+            }
         }
     }
 }
